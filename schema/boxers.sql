@@ -706,5 +706,12 @@ VALUES (8, 1),
        (2, 9),
        (10, 10);
 
+INSERT INTO admin (id, name, password, roles, active)
+VALUES (1, 'Jimmy',
+        '$argon2id$v=19$m=65536,t=4,p=1$iula8QSe/0baWjAUYxPddg$/9H7Bci+dCv64H9XHzzPne6nJhVVjipl90EHVJKbzgU',
+        '[
+          "ROLE_ADMIN"
+        ]', 1);
+
 COMMIT;
 
