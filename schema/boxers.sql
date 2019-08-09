@@ -64,7 +64,7 @@ CREATE TABLE IF NOT EXISTS `boxers`.`boxer`
     CONSTRAINT `fk_boxer_divisionId`
         FOREIGN KEY (`division_id`)
             REFERENCES `boxers`.`division` (`id`)
-            ON DELETE NO ACTION
+            ON DELETE CASCADE 
             ON UPDATE NO ACTION
 )
     ENGINE = InnoDB;
