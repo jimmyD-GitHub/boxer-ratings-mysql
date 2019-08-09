@@ -1,5 +1,7 @@
 {
   "name": "jimmyd-github/boxer-ratings-mysql",
+  "type": "library",
+  "description": "Library to share schema data and MySQL container between projects.",
   "require-dev": {
     "roave/security-advisories": "dev-master"
   }
