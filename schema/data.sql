@@ -1,3 +1,5 @@
+USE boxers;
+
 INSERT INTO `user` (`id`, `name`, `email`, `password`, `created_at`, `active`, `confirmed`)
 VALUES (999, 'Jimmy', 'jamesalandixon@gmail.com', '$2y$10$gNWX2jS.gemnaimVh6yn5eXGj.Nf4hwuYafbC.nFYxcIrq14.b0Om',
         '2018-07-27 14:45:45', 1, 1);
