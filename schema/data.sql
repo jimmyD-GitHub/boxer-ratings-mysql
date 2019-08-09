@@ -1,7 +1,7 @@
 USE boxers;
 
 INSERT INTO `user` (`id`, `name`, `email`, `password`, `created_at`, `active`, `confirmed`)
-VALUES (999, 'Jimmy', 'jamesalandixon@gmail.com', '$2y$10$gNWX2jS.gemnaimVh6yn5eXGj.Nf4hwuYafbC.nFYxcIrq14.b0Om',
+VALUES (999, 'Jimmy', 'jamesalandixon@gmail.com', '$argon2i$v=19$m=65536,t=4,p=1$RWMxVmd5dEtMZThYRlJrSg$RXEPSIxQSbgTFYxKHB2MeDv/dtwjt+27yqUsOqSFSjc',
         '2018-07-27 14:45:45', 1, 1);
 
 INSERT INTO `boxer` (`id`, `division_id`, `boxrec_id`, `name`, `nationality`, `dob`, `record`, `home_town`, `snippet`,
