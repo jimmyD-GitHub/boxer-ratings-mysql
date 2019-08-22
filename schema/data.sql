@@ -1,8 +1,12 @@
 USE boxers;
 
 INSERT INTO `user` (`id`, `name`, `email`, `password`, `created_at`, `active`, `confirmed`)
-VALUES (999, 'Jimmy', 'jamesalandixon@gmail.com', '$argon2i$v=19$m=65536,t=4,p=1$RWMxVmd5dEtMZThYRlJrSg$RXEPSIxQSbgTFYxKHB2MeDv/dtwjt+27yqUsOqSFSjc',
-        '2018-07-27 14:45:45', 1, 1);
+VALUES (999, 'Jimmy', 'jamesalandixon@gmail.com',
+        '$argon2i$v=19$m=65536,t=4,p=1$RWMxVmd5dEtMZThYRlJrSg$RXEPSIxQSbgTFYxKHB2MeDv/dtwjt+27yqUsOqSFSjc',
+        '2018-07-27 14:45:45', 1, 1),
+       (1000, 'James', 'jamesalandixon@googlemail.com',
+        '$argon2i$v=19$m=65536,t=4,p=1$RWMxVmd5dEtMZThYRlJrSg$RXEPSIxQSbgTFYxKHB2MeDv/dtwjt+27yqUsOqSFSjc',
+        '2018-07-28 14:45:45', 1, 1);
 
 INSERT INTO `boxer` (`id`, `division_id`, `boxrec_id`, `name`, `nationality`, `dob`, `record`, `home_town`, `snippet`,
                      `twitter`, `enabled`, `created_at`, `updated_at`, `deleted_at`)
@@ -61,6 +65,14 @@ VALUES (8, 1),
        (1, 8),
        (2, 9),
        (10, 10);
+
+INSERT INTO `heavyweight_user_rating` (`user_id`, `boxer_id`, `rating`)
+VALUES (999, 8, 1),
+       (999, 2, 2),
+       (999, 1, 3),
+       (1000, 8, 1),
+       (1000, 2, 2),
+       (1000, 1, 3);
 
 INSERT INTO admin (id, name, password, roles, active)
 VALUES (1, 'Jimmy',
