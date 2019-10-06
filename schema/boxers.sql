@@ -123,6 +123,7 @@ CREATE TABLE IF NOT EXISTS `boxers`.`password_token`
     `user_id`    INT(11)      NOT NULL,
     `token`      VARCHAR(500) NOT NULL,
     `created_at` DATETIME     NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    `updated_at` DATETIME     NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
     UNIQUE INDEX `token` (`token` ASC),
     PRIMARY KEY (`user_id`),
     CONSTRAINT `fk_passwordToken_userId`
