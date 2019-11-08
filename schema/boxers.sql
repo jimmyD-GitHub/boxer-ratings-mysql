@@ -146,6 +146,7 @@ CREATE TABLE IF NOT EXISTS `boxers`.`email_queue`
     `type`       ENUM ('resetPassword', 'signupConfirmation') NOT NULL,
     `token`      VARCHAR(500)                                 NOT NULL,
     `created_at` DATETIME                                     NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    `sent_at`    DATETIME                                              DEFAULT NULL,
     PRIMARY KEY (`id`),
     CONSTRAINT `fk_emailQueue_userId`
         FOREIGN KEY (`user_id`)
