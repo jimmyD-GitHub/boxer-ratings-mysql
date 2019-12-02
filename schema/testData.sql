@@ -16,17 +16,17 @@ VALUES (999, 1, 474, 'Mike Tyson', 'US', '1966-06-30', '50-6-0', 'Brooklyn, New 
 
 -- Middleweights
 INSERT INTO `boxer` (`id`, `division_id`, `boxrec_id`, `name`, `nationality`, `dob`, `record`, `home_town`,
-                     `snippet`, `twitter`, `enabled`)
+                     `snippet`, `twitter`, `titles`, `enabled`)
 VALUES (998, 5, 774820, 'Roy Jones Jr', 'US', '1969-01-16', '65-9-0', 'Pensacola, Florida',
-        'So good he didn\'t need a nick name.', null, 1),
+        'So good he didn\'t need a nick name.', null, null, 1),
        (997, 5, 1437, 'James Toney', 'US', '1968-08-24', '77-10-3', 'Grand Rapids, Michigan',
-        'His middle name was \'Light Out\'.', 'RealJamesToney' 'WBC, WBA', 1),
+        'His middle name was \'Light Out\'.', 'RealJamesToney', 'WBC, WBA', 1),
        (996, 5, 447, 'Iran Barkley', 'US', '1960-05-06', '43-19-1', 'The Bronx, New York',
-        'He was known as \'The Blade\'.', null, 1),
+        'He was known as \'The Blade\'.', null, null, 1),
        (995, 5, 804, 'Chris Eubank', 'GB', '1966-08-08', '45-5-2', 'Dulwich, London',
-        'Simply the best!', null, 1),
+        'Simply the best!', null, null, 1),
        (994, 5, 739, 'Nigel Benn', 'GB', '1964-01-22', '42-5-1', 'Ilford, Essex',
-        'They called him \'The Dark Destroyer\'.', null, 0);
+        'They called him \'The Dark Destroyer\'.', null, null, 0);
 
 -- Ratings
 INSERT INTO `rating` (`division_id`, `boxer_id`, `rating`, `points`)
