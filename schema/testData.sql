@@ -44,7 +44,8 @@ INSERT INTO `user` (`id`, `name`, `email`, `active`, `confirmed`, `password`)
 VALUES (996, 'Billy', 'billy-test@gmail.com', 1, 0, '$2y$07$BCryptRequires22Chrcte/VlQH0piJtjXl.0t1XkA8pw9dMXTpOq'),
        (997, 'Bobby', 'bobby-test@gmail.com', 0, 0, '$2y$07$BCryptRequires22Chrcte/VlQH0piJtjXl.0t1XkA8pw9dMXTpOq'),
        (998, 'Jimmy', 'jimmy-test@gmail.com', 0, 0, '$2y$07$BCryptRequires22Chrcte/VlQH0piJtjXl.0t1XkA8pw9dMXTpOq'),
-       (999, 'Tommy', 'tommy-test@gmail.com', 1, 1, '$2y$07$BCryptRequires22Chrcte/VlQH0piJtjXl.0t1XkA8pw9dMXTpOq');
+       (999, 'Tommy', 'tommy-test@gmail.com', 1, 1, '$2y$07$BCryptRequires22Chrcte/VlQH0piJtjXl.0t1XkA8pw9dMXTpOq'),
+       (1000, 'Andy', 'andy-test@gmail.com', 1, 1, '$2y$07$BCryptRequires22Chrcte/VlQH0piJtjXl.0t1XkA8pw9dMXTpOq');
 
 -- Password Tokens
 INSERT INTO `password_token` (`user_id`, `token`, `created_at`, `updated_at`)
@@ -52,7 +53,7 @@ VALUES (999, 'vg4JPwDpaFlzm+hXfuxpyWyhj7YqHkHq6G+hUifqlAnWu2DuPHdOZoJfYGJlMgv8YE
         '2019-10-24 12:00:00', '2019-10-24 12:00:00');
 
 -- User Ratings
-INSERT INTO `heavyweight_user_rating` (`user_id`, `boxer_id` , `rating`)
+INSERT INTO `heavyweight_user_rating` (`user_id`, `boxer_id`, `rating`)
 VALUES (999, 1002, 1),
        (999, 999, 2),
        (999, 1000, 3);
