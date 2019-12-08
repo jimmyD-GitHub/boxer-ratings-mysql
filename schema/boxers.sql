@@ -129,7 +129,7 @@ CREATE TABLE IF NOT EXISTS `boxers`.`password_token`
     CONSTRAINT `fk_passwordToken_userId`
         FOREIGN KEY (`user_id`)
             REFERENCES `boxers`.`user` (`id`)
-            ON DELETE NO ACTION
+            ON DELETE CASCADE
             ON UPDATE NO ACTION
 )
     ENGINE = InnoDB;
@@ -151,7 +151,7 @@ CREATE TABLE IF NOT EXISTS `boxers`.`email_queue`
     CONSTRAINT `fk_emailQueue_userId`
         FOREIGN KEY (`user_id`)
             REFERENCES `boxers`.`user` (`id`)
-            ON DELETE NO ACTION
+            ON DELETE CASCADE 
             ON UPDATE NO ACTION
 )
     ENGINE = InnoDB;
