@@ -211,7 +211,7 @@ CREATE TABLE IF NOT EXISTS `boxers`.`heavyweight_user_rating`
     CONSTRAINT `fk_heavyweight_user_rating_user`
         FOREIGN KEY (`user_id`)
             REFERENCES `boxers`.`user` (`id`)
-            ON DELETE NO ACTION
+            ON DELETE CASCADE
             ON UPDATE NO ACTION,
     CONSTRAINT `fk_heavyweight_user_rating_boxer`
         FOREIGN KEY (`boxer_id`)
@@ -237,7 +237,7 @@ CREATE TABLE IF NOT EXISTS `boxers`.`cruiserweight_user_rating`
     CONSTRAINT `fk_crusierweight_user_rating_user`
         FOREIGN KEY (`user_id`)
             REFERENCES `boxers`.`user` (`id`)
-            ON DELETE NO ACTION
+            ON DELETE CASCADE
             ON UPDATE NO ACTION,
     CONSTRAINT `fk_cruiserweight_user_rating_boxer`
         FOREIGN KEY (`boxer_id`)
@@ -263,7 +263,7 @@ CREATE TABLE IF NOT EXISTS `boxers`.`lightheavyweight_user_rating`
     CONSTRAINT `fk_lightheavyweight_user_rating_user`
         FOREIGN KEY (`user_id`)
             REFERENCES `boxers`.`user` (`id`)
-            ON DELETE NO ACTION
+            ON DELETE CASCADE
             ON UPDATE NO ACTION,
     CONSTRAINT `fk_lightheavyweight_user_rating_boxer`
         FOREIGN KEY (`boxer_id`)
@@ -289,7 +289,7 @@ CREATE TABLE IF NOT EXISTS `boxers`.`supermiddleweight_user_rating`
     CONSTRAINT `fk_supermiddleweight_user_rating_user`
         FOREIGN KEY (`user_id`)
             REFERENCES `boxers`.`user` (`id`)
-            ON DELETE NO ACTION
+            ON DELETE CASCADE
             ON UPDATE NO ACTION,
     CONSTRAINT `fk_supermiddleweight_user_rating_boxer`
         FOREIGN KEY (`boxer_id`)
@@ -315,7 +315,7 @@ CREATE TABLE IF NOT EXISTS `boxers`.`middleweight_user_rating`
     CONSTRAINT `fk_middleweight_user_rating_user`
         FOREIGN KEY (`user_id`)
             REFERENCES `boxers`.`user` (`id`)
-            ON DELETE NO ACTION
+            ON DELETE CASCADE
             ON UPDATE NO ACTION,
     CONSTRAINT `fk_middleweight_user_rating_boxer`
         FOREIGN KEY (`boxer_id`)
@@ -341,7 +341,7 @@ CREATE TABLE IF NOT EXISTS `boxers`.`lightmiddleweight_user_rating`
     CONSTRAINT `fk_lightmiddleweight_user_rating_user`
         FOREIGN KEY (`user_id`)
             REFERENCES `boxers`.`user` (`id`)
-            ON DELETE NO ACTION
+            ON DELETE CASCADE
             ON UPDATE NO ACTION,
     CONSTRAINT `fk_lightmiddleweight_user_rating_boxer`
         FOREIGN KEY (`boxer_id`)
@@ -367,7 +367,7 @@ CREATE TABLE IF NOT EXISTS `boxers`.`welterweight_user_rating`
     CONSTRAINT `fk_welterweight_user_rating_user`
         FOREIGN KEY (`user_id`)
             REFERENCES `boxers`.`user` (`id`)
-            ON DELETE NO ACTION
+            ON DELETE CASCADE
             ON UPDATE NO ACTION,
     CONSTRAINT `fk_welterweight_user_rating_boxer`
         FOREIGN KEY (`boxer_id`)
@@ -393,7 +393,7 @@ CREATE TABLE IF NOT EXISTS `boxers`.`lightwelterweight_user_rating`
     CONSTRAINT `fk_lightwelterweight_user_rating_user`
         FOREIGN KEY (`user_id`)
             REFERENCES `boxers`.`user` (`id`)
-            ON DELETE NO ACTION
+            ON DELETE CASCADE
             ON UPDATE NO ACTION,
     CONSTRAINT `fk_lightwelterweight_user_rating_boxer`
         FOREIGN KEY (`boxer_id`)
@@ -418,7 +418,7 @@ CREATE TABLE IF NOT EXISTS `boxers`.`lightweight_user_rating`
     CONSTRAINT `fk_lightweight_user_rating_user`
         FOREIGN KEY (`user_id`)
             REFERENCES `boxers`.`user` (`id`)
-            ON DELETE NO ACTION
+            ON DELETE CASCADE
             ON UPDATE NO ACTION,
     CONSTRAINT `fk_lightweight_user_rating_boxer`
         FOREIGN KEY (`boxer_id`)
@@ -443,7 +443,7 @@ CREATE TABLE IF NOT EXISTS `boxers`.`superfeatherweight_user_rating`
     CONSTRAINT `fk_superfeatherweight_user_rating_user`
         FOREIGN KEY (`user_id`)
             REFERENCES `boxers`.`user` (`id`)
-            ON DELETE NO ACTION
+            ON DELETE CASCADE
             ON UPDATE NO ACTION,
     CONSTRAINT `fk_superfeatherweight_user_rating_boxer`
         FOREIGN KEY (`boxer_id`)
@@ -473,7 +473,7 @@ CREATE TABLE IF NOT EXISTS `boxers`.`featherweight_user_rating`
     CONSTRAINT `fk_featherweight_user_rating_user`
         FOREIGN KEY (`user_id`)
             REFERENCES `boxers`.`user` (`id`)
-            ON DELETE NO ACTION
+            ON DELETE CASCADE
             ON UPDATE NO ACTION,
     CONSTRAINT `fk_featherweight_user_rating_boxer`
         FOREIGN KEY (`boxer_id`)
@@ -498,7 +498,7 @@ CREATE TABLE IF NOT EXISTS `boxers`.`superbantamweight_user_rating`
     CONSTRAINT `fk_superbantamweight_user_rating_user`
         FOREIGN KEY (`user_id`)
             REFERENCES `boxers`.`user` (`id`)
-            ON DELETE NO ACTION
+            ON DELETE CASCADE
             ON UPDATE NO ACTION,
     CONSTRAINT `fk_superbantamweight_user_rating_boxer`
         FOREIGN KEY (`boxer_id`)
@@ -523,7 +523,7 @@ CREATE TABLE IF NOT EXISTS `boxers`.`bantamweight_user_rating`
     CONSTRAINT `fk_bantamweight_user_rating_user`
         FOREIGN KEY (`user_id`)
             REFERENCES `boxers`.`user` (`id`)
-            ON DELETE NO ACTION
+            ON DELETE CASCADE
             ON UPDATE NO ACTION,
     CONSTRAINT `fk_bantamweight_user_rating_boxer`
         FOREIGN KEY (`boxer_id`)
@@ -548,7 +548,7 @@ CREATE TABLE IF NOT EXISTS `boxers`.`superflyweight_user_rating`
     CONSTRAINT `fk_superflyweight_user_rating_user`
         FOREIGN KEY (`user_id`)
             REFERENCES `boxers`.`user` (`id`)
-            ON DELETE NO ACTION
+            ON DELETE CASCADE
             ON UPDATE NO ACTION,
     CONSTRAINT `fk_superflyweight_user_rating_boxer`
         FOREIGN KEY (`boxer_id`)
@@ -573,7 +573,7 @@ CREATE TABLE IF NOT EXISTS `boxers`.`flyweight_user_rating`
     CONSTRAINT `fk_flyweight_user_rating_user`
         FOREIGN KEY (`user_id`)
             REFERENCES `boxers`.`user` (`id`)
-            ON DELETE NO ACTION
+            ON DELETE CASCADE
             ON UPDATE NO ACTION,
     CONSTRAINT `fk_flyweight_user_rating_boxer`
         FOREIGN KEY (`boxer_id`)
@@ -598,7 +598,7 @@ CREATE TABLE IF NOT EXISTS `boxers`.`lightflyweight_user_rating`
     CONSTRAINT `fk_lightflyweight_user_rating_user`
         FOREIGN KEY (`user_id`)
             REFERENCES `boxers`.`user` (`id`)
-            ON DELETE NO ACTION
+            ON DELETE CASCADE
             ON UPDATE NO ACTION,
     CONSTRAINT `fk_lightflyweight_user_rating_boxer`
         FOREIGN KEY (`boxer_id`)
@@ -623,7 +623,7 @@ CREATE TABLE IF NOT EXISTS `boxers`.`minimumweight_user_rating`
     CONSTRAINT `fk_minimumweight_user_rating_user`
         FOREIGN KEY (`user_id`)
             REFERENCES `boxers`.`user` (`id`)
-            ON DELETE NO ACTION
+            ON DELETE CASCADE
             ON UPDATE NO ACTION,
     CONSTRAINT `fk_minimumweight_user_rating_boxer`
         FOREIGN KEY (`boxer_id`)

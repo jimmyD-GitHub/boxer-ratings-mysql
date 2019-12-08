@@ -56,7 +56,10 @@ VALUES (999, 'vg4JPwDpaFlzm+hXfuxpyWyhj7YqHkHq6G+hUifqlAnWu2DuPHdOZoJfYGJlMgv8YE
 INSERT INTO `heavyweight_user_rating` (`user_id`, `boxer_id`, `rating`)
 VALUES (999, 1002, 1),
        (999, 999, 2),
-       (999, 1000, 3);
+       (999, 1000, 3),
+       (1000, 1002, 1),
+       (1000, 999, 2),
+       (1000, 1000, 3);
 
 -- P4P Ratings
 INSERT INTO `p4p_rating` (`boxer_id`, `rating`)
