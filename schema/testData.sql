@@ -47,6 +47,15 @@ VALUES (996, 'Billy', 'billy-test@gmail.com', 1, 0, '$2y$07$BCryptRequires22Chrc
        (999, 'Tommy', 'tommy-test@gmail.com', 1, 1, '$2y$07$BCryptRequires22Chrcte/VlQH0piJtjXl.0t1XkA8pw9dMXTpOq'),
        (1000, 'Andy', 'andy-test@gmail.com', 1, 1, '$2y$07$BCryptRequires22Chrcte/VlQH0piJtjXl.0t1XkA8pw9dMXTpOq');
 
+-- Email Queue
+INSERT INTO `email_queue` (user_id, type, token, created_at, sent_at)
+VALUES (1000, 'resetPassword', 'vg4JPwDpaFlzm+hXfuxpyWyhj7YqHkHq6G+hUifqlAnWu2DuPHdOZoJfYGJlMgv8YEZaqEEfwVe48dfx',
+        '2019-11-01 23:59:59', NULL),
+       (996, 'signupConfirmation', 'vg4JPwDpaFlzm+hXfuxpyWyhj7YqHkHq6G+hUifqlAnWu2DuPHdOZoJfYGJlMgv8YEZaqEEfwVe48dfx',
+        '2019-11-01 21:30:00', NULL),
+       (999, 'signupConfirmation', 'vg4JPwDpaFlzm+hXfuxpyWyhj7YqHkHq6G+hUifqlAnWu2DuPHdOZoJfYGJlMgv8YEZaqEEfwVe48dfx',
+        '2019-11-01 23:59:59', '2019-11-02 01:03:45');
+
 -- Password Tokens
 INSERT INTO `password_token` (`user_id`, `token`, `created_at`, `updated_at`)
 VALUES (999, 'vg4JPwDpaFlzm+hXfuxpyWyhj7YqHkHq6G+hUifqlAnWu2DuPHdOZoJfYGJlMgv8YEZaqEEfwVe48dfx',
