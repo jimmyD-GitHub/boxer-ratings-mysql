@@ -80,3 +80,11 @@ VALUES (1, 'Jimmy',
         '[
           "ROLE_ADMIN"
         ]', 1);
+
+INSERT INTO `email_queue` (user_id, type, token, created_at, sent_at)
+VALUES (999, 'resetPassword', 'vg4JPwDpaFlzm+hXfuxpyWyhj7YqHkHq6G+hUifqlAnWu2DuPHdOZoJfYGJlMgv8YEZaqEEfwVe48dfx',
+        '2019-11-01 23:59:59', NULL),
+       (999, 'signupConfirmation', 'vg4JPwDpaFlzm+hXfuxpyWyhj7YqHkHq6G+hUifqlAnWu2DuPHdOZoJfYGJlMgv8YEZaqEEfwVe48dfx',
+        '2019-11-01 21:30:00', NULL),
+       (999, 'signupConfirmation', 'vg4JPwDpaFlzm+hXfuxpyWyhj7YqHkHq6G+hUifqlAnWu2DuPHdOZoJfYGJlMgv8YEZaqEEfwVe48dfx',
+        '2019-11-01 23:59:59', '2019-11-02 01:03:45');
