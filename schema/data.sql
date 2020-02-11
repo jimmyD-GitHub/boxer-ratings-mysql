@@ -1,12 +1,12 @@
 USE boxers;
 
-INSERT INTO `user` (`id`, `name`, `email`, `password`, `created_at`, `active`, `confirmed`)
+INSERT INTO `user` (`id`, `name`, `email`, `password`, `created_at`, `active`, `confirmed`, `fingerprint`)
 VALUES (999, 'Jimmy', 'jamesalandixon@gmail.com',
         '$argon2i$v=19$m=65536,t=4,p=1$RWMxVmd5dEtMZThYRlJrSg$RXEPSIxQSbgTFYxKHB2MeDv/dtwjt+27yqUsOqSFSjc',
-        '2018-07-27 14:45:45', 1, 1),
+        '2018-07-27 14:45:45', 1, 1, '179bfcfa80c41e8342a91c4fcfc3c91e'),
        (1000, 'James', 'jamesalandixon@googlemail.com',
         '$argon2i$v=19$m=65536,t=4,p=1$RWMxVmd5dEtMZThYRlJrSg$RXEPSIxQSbgTFYxKHB2MeDv/dtwjt+27yqUsOqSFSjc',
-        '2018-07-28 14:45:45', 1, 1);
+        '2018-07-28 14:45:45', 1, 1, '179bfcfa80c41e8342a91c4fcfc3c91e');
 
 INSERT INTO `boxer` (`id`, `division_id`, `boxrec_id`, `name`, `nationality`, `dob`, `record`, `home_town`, `snippet`,
                      `twitter`, `enabled`, `created_at`, `updated_at`, `deleted_at`)

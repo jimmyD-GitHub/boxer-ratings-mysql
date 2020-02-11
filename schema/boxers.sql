@@ -101,15 +101,17 @@ DROP TABLE IF EXISTS `boxers`.`user`;
 
 CREATE TABLE IF NOT EXISTS `boxers`.`user`
 (
-    `id`         INT(11)      NOT NULL AUTO_INCREMENT,
-    `name`       VARCHAR(45)  NOT NULL,
-    `email`      VARCHAR(255) NOT NULL,
-    `password`   VARCHAR(255) NOT NULL,
-    `created_at` DATETIME     NOT NULL DEFAULT CURRENT_TIMESTAMP,
-    `active`     TINYINT(1)   NOT NULL DEFAULT 1,
-    `confirmed`  VARCHAR(45)  NOT NULL DEFAULT 0,
+    `id`          INT(11)      NOT NULL AUTO_INCREMENT,
+    `name`        VARCHAR(45)  NOT NULL,
+    `email`       VARCHAR(255) NOT NULL,
+    `password`    VARCHAR(255) NOT NULL,
+    `created_at`  DATETIME     NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    `active`      TINYINT(1)   NOT NULL DEFAULT 1,
+    `confirmed`   VARCHAR(45)  NOT NULL DEFAULT 0,
+    `fingerprint` CHAR(32)     NOT NULL,
     PRIMARY KEY (`id`),
-    UNIQUE INDEX `email_UNIQUE` (`email` ASC)
+    UNIQUE INDEX `email_UNIQUE` (`email` ASC),
+    INDEX `fingerprint` (`fingerprint`)
 )
     ENGINE = InnoDB;
 
@@ -151,7 +153,7 @@ CREATE TABLE IF NOT EXISTS `boxers`.`email_queue`
     CONSTRAINT `fk_emailQueue_userId`
         FOREIGN KEY (`user_id`)
             REFERENCES `boxers`.`user` (`id`)
-            ON DELETE CASCADE 
+            ON DELETE CASCADE
             ON UPDATE NO ACTION
 )
     ENGINE = InnoDB;

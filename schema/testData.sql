@@ -40,12 +40,17 @@ VALUES (1, 999, 1, 599),
        (5, 995, 3, 200);
 
 -- Users
-INSERT INTO `user` (`id`, `name`, `email`, `active`, `confirmed`, `password`)
-VALUES (996, 'Billy', 'billy-test@gmail.com', 1, 0, '$2y$07$BCryptRequires22Chrcte/VlQH0piJtjXl.0t1XkA8pw9dMXTpOq'),
-       (997, 'Bobby', 'bobby-test@gmail.com', 0, 0, '$2y$07$BCryptRequires22Chrcte/VlQH0piJtjXl.0t1XkA8pw9dMXTpOq'),
-       (998, 'Jimmy', 'jimmy-test@gmail.com', 0, 0, '$2y$07$BCryptRequires22Chrcte/VlQH0piJtjXl.0t1XkA8pw9dMXTpOq'),
-       (999, 'Tommy', 'tommy-test@gmail.com', 1, 1, '$2y$07$BCryptRequires22Chrcte/VlQH0piJtjXl.0t1XkA8pw9dMXTpOq'),
-       (1000, 'Andy', 'andy-test@gmail.com', 1, 1, '$2y$07$BCryptRequires22Chrcte/VlQH0piJtjXl.0t1XkA8pw9dMXTpOq');
+INSERT INTO `user` (`id`, `name`, `email`, `active`, `confirmed`, `password`, `fingerprint`)
+VALUES (996, 'Billy', 'billy-test@gmail.com', 1, 0, '$2y$07$BCryptRequires22Chrcte/VlQH0piJtjXl.0t1XkA8pw9dMXTpOq',
+        '179bfcfa80c41e8342a91c4fcfc3c91e'),
+       (997, 'Bobby', 'bobby-test@gmail.com', 0, 0, '$2y$07$BCryptRequires22Chrcte/VlQH0piJtjXl.0t1XkA8pw9dMXTpOq',
+        '179bfcfa80c41e8342a91c4fcfc3c91e'),
+       (998, 'Jimmy', 'jimmy-test@gmail.com', 0, 0, '$2y$07$BCryptRequires22Chrcte/VlQH0piJtjXl.0t1XkA8pw9dMXTpOq',
+        '179bfcfa80c41e8342a91c4fcfc3c91e'),
+       (999, 'Tommy', 'tommy-test@gmail.com', 1, 1, '$2y$07$BCryptRequires22Chrcte/VlQH0piJtjXl.0t1XkA8pw9dMXTpOq',
+        '179bfcfa80c41e8342a91c4fcfc3c91e'),
+       (1000, 'Andy', 'andy-test@gmail.com', 1, 1, '$2y$07$BCryptRequires22Chrcte/VlQH0piJtjXl.0t1XkA8pw9dMXTpOq',
+        '179bfcfa80c41e8342a91c4fcfc3c91e');
 
 -- Email Queue
 INSERT INTO `email_queue` (user_id, type, token, created_at, sent_at)
