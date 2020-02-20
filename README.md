@@ -20,4 +20,4 @@ $ docker push jimmydockerhub/boxer-ratings-mysql:latest
 
 ## Production
 
-TODO: It will be somewhere on AWS.
+The database is a MySQL instance hosted on AWS RDS.
