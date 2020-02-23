@@ -165,12 +165,13 @@ DROP TABLE IF EXISTS `boxers`.`admin`;
 
 CREATE TABLE IF NOT EXISTS `boxers`.`admin`
 (
-    `id`         INT(11)      NOT NULL AUTO_INCREMENT,
-    `name`       VARCHAR(45)  NOT NULL,
-    `password`   VARCHAR(255) NOT NULL,
-    `roles`      JSON         NOT NULL,
-    `created_at` DATETIME     NOT NULL DEFAULT CURRENT_TIMESTAMP,
-    `active`     TINYINT(1)   NOT NULL DEFAULT 1,
+    `id`                        INT(11)      NOT NULL AUTO_INCREMENT,
+    `name`                      VARCHAR(45)  NOT NULL,
+    `password`                  VARCHAR(255) NOT NULL,
+    `roles`                     JSON         NOT NULL,
+    `created_at`                DATETIME     NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    `active`                    TINYINT(1)   NOT NULL DEFAULT 1,
+    `googleAuthenticatorSecret` char(52)              DEFAULT NULL,
     PRIMARY KEY (`id`),
     UNIQUE INDEX `name_UNIQUE` (`name` ASC)
 )
