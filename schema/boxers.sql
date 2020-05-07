@@ -65,6 +65,30 @@ CREATE TABLE IF NOT EXISTS `boxers`.`boxer`
 )
     ENGINE = InnoDB;
 
+-- -----------------------------------------------------
+-- Table `boxers`.`blog_post`
+-- -----------------------------------------------------
+DROP TABLE IF EXISTS `boxers`.`blog_post`;
+
+CREATE TABLE IF NOT EXISTS `boxers`.`blog_post`
+(
+    `id`          INT(11) UNSIGNED                                               NOT NULL AUTO_INCREMENT,
+    `title`       VARCHAR(255)                                                   NOT NULL,
+    `description` VARCHAR(255)                                                   NOT NULL,
+    `sub_heading` VARCHAR(255)                                                   NOT NULL,
+    `body`        TEXT                                                           NOT NULL,
+    `type`        ENUM ('prediction', 'opinion', 'report', 'profile', 'feature') NOT NULL,
+    `slug`        VARCHAR(255)                                                   NOT NULL,
+    `enabled`     TINYINT(1)                                                     NOT NULL DEFAULT 0,
+    `created_at`  DATETIME                                                       NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    `updated_at`  DATETIME                                                       NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+    `deleted_at`  DATETIME                                                       NULL     DEFAULT NULL,
+    PRIMARY KEY (`id`),
+    UNIQUE (`slug`),
+    FULLTEXT (`title`, `sub_heading`, `description`, `body`, `slug`)
+)
+    ENGINE = InnoDB;
+
 
 -- -----------------------------------------------------
 -- Table `boxers`.`rating`
@@ -636,6 +660,32 @@ CREATE TABLE IF NOT EXISTS `boxers`.`minimumweight_user_rating`
 )
     ENGINE = InnoDB;
 
+-- -----------------------------------------------------
+-- Table `boxers`.`rating_update`
+-- -----------------------------------------------------
+DROP TABLE IF EXISTS `boxers`.`rating_update`;
+
+CREATE TABLE IF NOT EXISTS `boxers`.`rating_update`
+(
+    `division_id` TINYINT(2) UNSIGNED NOT NULL,
+    `user_id`     INT(11)             NOT NULL,
+    `created_at`  DATETIME            NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    `updated_at`  DATETIME            NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+    PRIMARY KEY (`division_id`, `user_id`),
+    INDEX `index_userId` (`user_id` ASC),
+    INDEX `index_divisionId` (`division_id` ASC),
+    CONSTRAINT `fk_rating_update_division`
+        FOREIGN KEY (`division_id`)
+            REFERENCES `boxers`.`division` (`id`)
+            ON DELETE NO ACTION
+            ON UPDATE NO ACTION,
+    CONSTRAINT `fk_rating_update_user`
+        FOREIGN KEY (`user_id`)
+            REFERENCES `boxers`.`user` (`id`)
+            ON DELETE CASCADE
+            ON UPDATE NO ACTION
+)
+    ENGINE = InnoDB;
 
 SET SQL_MODE = @OLD_SQL_MODE;
 SET FOREIGN_KEY_CHECKS = @OLD_FOREIGN_KEY_CHECKS;
