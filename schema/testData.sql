@@ -80,3 +80,10 @@ INSERT INTO `p4p_rating` (`boxer_id`, `rating`)
 VALUES (998, 1),
        (997, 2),
        (999, 3);
+
+-- Blog Posts
+INSERT INTO `blog_post` (`title`, `description`, `sub_heading`, `body`, `type`, `slug`, `enabled`)
+VALUES ('Saul Alvarez vs Gennady Golovkin', 'Middleweight title fight preview.', 'Madison Square Garden, New York',
+        'Alvarez and GGG fighting for the 3rd time.', 'prediction', 'saul-alvarez-vs-gennady-golovkin', 1),
+       ('Saul Alvarez vs Callum Smith', 'Super Middleweight title fight preview.', 'Wembley Stadium, London',
+        'Alvarez and Smith fighting at 168lbs.', 'report', 'saul-alvarez-vs-callum-smith', 1);
