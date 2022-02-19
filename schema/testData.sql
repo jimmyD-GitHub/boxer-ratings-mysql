@@ -50,6 +50,8 @@ VALUES (996, 'Billy', 'billy-test@gmail.com', 1, 0, '$2y$07$BCryptRequires22Chrc
        (999, 'Tommy', 'tommy-test@gmail.com', 1, 1, '$2y$07$BCryptRequires22Chrcte/VlQH0piJtjXl.0t1XkA8pw9dMXTpOq',
         '179bfcfa80c41e8342a91c4fcfc3c91e'),
        (1000, 'Andy', 'andy-test@gmail.com', 1, 1, '$2y$07$BCryptRequires22Chrcte/VlQH0piJtjXl.0t1XkA8pw9dMXTpOq',
+        '179bfcfa80c41e8342a91c4fcfc3c91e'),
+       (1001, 'Mark', 'mark-test@gmail.com', 1, 1, '$2y$07$BCryptRequires22Chrcte/VlQH0piJtjXl.0t1XkA8pw9dMXTpOq',
         '179bfcfa80c41e8342a91c4fcfc3c91e');
 
 -- Ratings Updated
