@@ -52,6 +52,14 @@ VALUES (996, 'Billy', 'billy-test@gmail.com', 1, 0, '$2y$07$BCryptRequires22Chrc
        (1000, 'Andy', 'andy-test@gmail.com', 1, 1, '$2y$07$BCryptRequires22Chrcte/VlQH0piJtjXl.0t1XkA8pw9dMXTpOq',
         '179bfcfa80c41e8342a91c4fcfc3c91e');
 
+-- Ratings Updated
+INSERT INTO `rating_update` (`division_id`, `user_id`)
+VALUES (1, 999),
+       (1, 1000);
+
+INSERT INTO `rating_update` (`division_id`, `user_id`, `created_at`, `updated_at`)
+VALUES (1, 1001, '2021-02-18 12:00:00', '2021-02-18 12:00:00');
+
 -- Email Queue
 INSERT INTO `email_queue` (user_id, type, token, created_at, sent_at)
 VALUES (1000, 'resetPassword', 'vg4JPwDpaFlzm+hXfuxpyWyhj7YqHkHq6G+hUifqlAnWu2DuPHdOZoJfYGJlMgv8YEZaqEEfwVe48dfx',
